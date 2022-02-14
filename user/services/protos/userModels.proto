@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package services;
+option go_package="./;protos";
+//用户数据模型
+message UserModel{
+    uint32 ID=1;
+    string UserName=2;
+    int64 CreatedAt=3;
+    int64 UpdatedAt=4;
+    int64 DeletedAt=5;
+}
+

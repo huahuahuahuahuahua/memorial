@@ -1,0 +1,25 @@
+
+syntax="proto3";
+
+package services;
+import "userModels.proto";
+option go_package="./;protos";
+
+//用户服务请求
+message UserRequest{
+    string UserName=1;
+    string Password=2;
+    string PasswordConfirm=3;
+}
+//用户具体信息响应信息
+message UserDetailResponse{
+    //从userModels取出来赋值UserDetail，用户详细信息
+    UserModel UserDetail=1;
+    uint32 Code=2;
+}
+//用户服务
+service UserService{
+    //rpc远程服务调用
+    rpc UserLogin(UserRequest) returns(UserDetailResponse);
+    rpc UserRegister(UserRequest)returns (UserDetailResponse);
+}
