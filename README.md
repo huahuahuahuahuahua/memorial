@@ -8,7 +8,7 @@ comparing with rabbitmq,etcd,go-micro
 
 ### ternimal
 
-in the api-gateway and task and user 
+in the api-gateway and task and user and mq-server
 
 ```
 go run main.go
